@@ -1,0 +1,48 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="java" id="1001122005">
+       <insert tableName="panel">
+         <column name="id">2</column>
+         <column name="serial">1234567890123457</column>
+         <column name="longitude">52.104394</column>
+         <column name="latitude">15.999671</column>
+         <column name="brand">solaric</column>
+       </insert>
+       <insert tableName="panel">
+         <column name="id">3</column>
+         <column name="serial">1234567890123458</column>
+         <column name="longitude">40.104394</column>
+         <column name="latitude">12.999681</column>
+         <column name="brand">tesla</column>
+       </insert>
+       <insert tableName="panel">
+         <column name="id">4</column>
+         <column name="serial">1234567890123459</column>
+         <column name="longitude">43.104394</column>
+         <column name="latitude">18.999681</column>
+         <column name="brand">spark</column>
+       </insert>
+     </changeSet>
+     <changeSet author="java" id="1001122006">
+       <insert tableName="hourly_electricity">
+         <column name="panel_id">2</column>
+         <column name="generated_electricity">190</column>
+         <column name="reading_at">2018-08-13 20:40:00</column>
+       </insert>
+       <insert tableName="hourly_electricity">
+         <column name="panel_id">3</column>
+         <column name="generated_electricity">110</column>
+         <column name="reading_at">2018-08-13 20:40:00</column>
+       </insert>
+       <insert tableName="hourly_electricity">
+         <column name="panel_id">4</column>
+         <column name="generated_electricity">190</column>
+         <column name="reading_at">2018-08-13 20:40:00</column>
+       </insert>
+       <insert tableName="hourly_electricity">
+         <column name="panel_id">1</column>
+         <column name="generated_electricity">90</column>
+         <column name="reading_at">2018-08-13 08:40:00</column>
+       </insert>
+     </changeSet>
+</databaseChangeLog>
